@@ -2,6 +2,7 @@
  (public_name bz2)
  (synopsis "bindings for bzip2")
  (modules bz2)
+ (libraries stdlib-shims)
  (c_names c_bz)
  (c_flags
   "-DBZ_PREFIX"

@@ -28,7 +28,7 @@ external library_version : unit -> string
 
 let version = library_version ()
 
-external open_in : ?small:bool -> ?unused:string -> Pervasives.in_channel ->
+external open_in : ?small:bool -> ?unused:string -> Stdlib.Pervasives.in_channel ->
   in_channel 
   = "mlbz_readopen"
 
@@ -41,7 +41,7 @@ external read_get_unused : in_channel -> string
 external close_in : in_channel -> unit
   = "mlbz_readclose"
 
-external open_out : ?block:int -> Pervasives.out_channel -> out_channel
+external open_out : ?block:int -> Stdlib.Pervasives.out_channel -> out_channel
   = "mlbz_writeopen"
 
 external write : out_channel -> string -> int -> int -> unit

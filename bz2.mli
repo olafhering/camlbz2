@@ -51,7 +51,7 @@ val version : string
     decompressing that is slower but uses less memory. Defaults:
     [false]
 *)
-val open_in : ?small:bool -> ?unused:string -> Pervasives.in_channel ->
+val open_in : ?small:bool -> ?unused:string -> Stdlib.Pervasives.in_channel ->
   in_channel
 
 (** [read buf pos len] reads up to [len] characters and store them in
@@ -81,7 +81,7 @@ val close_in : in_channel -> unit
     @param block block size to use for compresion. It is a value
     between 1 and 9 inclusive. 9 is the default and provides best
     compression but takes most memory. *)
-val open_out : ?block:int -> Pervasives.out_channel -> out_channel
+val open_out : ?block:int -> Stdlib.Pervasives.out_channel -> out_channel
 
 (** [write oc buf pos len] writes [len] characters, coming from [buf]
     and starting at position [pos], to [oc] *)
