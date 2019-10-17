@@ -30,7 +30,7 @@ let oc =
   open_out (Filename.chop_suffix iname ".bz2")
 
 let buflen = 8192
-let buf = String.create buflen
+let buf = String.make buflen (char_of_int 0x0)
 let bzic = Bz2.open_in ic
 let _ =
   try
