@@ -36,7 +36,7 @@ let _ =
   try
     while true do
       let bytes = Bz2.read bzic buf 0 buflen in
-	output oc buf 0 bytes;
+	output oc (Bytes.of_string buf) 0 bytes;
 	if bytes < buflen then raise End_of_file
     done
   with End_of_file -> ();
