@@ -1,0 +1,4 @@
+(executable
+ (name bunzip2)
+ (public_name ocaml-bunzip2)
+ (libraries bz2))

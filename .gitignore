@@ -1,1 +1,6 @@
+*~
+_build
+.merlin
 .pc
+bz2.install
+bz2.opam
